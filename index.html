@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Signs Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #0f0;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            text-decoration: underline;
+        }
+        .status {
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+        .bar-container {
+            width: 80%;
+            background-color: #222;
+            border-radius: 10px;
+            margin: 10px auto;
+            overflow: hidden;
+            height: 25px;
+            position: relative;
+        }
+        .bar {
+            height: 100%;
+            text-align: center;
+            line-height: 25px;
+            color: #000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+        }
+    </style>
+    <script>
+        function setBarLevel(className, level) {
+            let bars = document.getElementsByClassName(className);
+            for (let bar of bars) {
+                let widthPercentage = (level / 100) * 100;
+                bar.style.width = widthPercentage + "%";
+                bar.style.backgroundColor = level > 7 ? "#0f0" : level > 4 ? "#ff0" : "#f00";
+            }
+        }
+        
+        window.onload = function() {
+            setBarLevel("vision", 100);
+            setBarLevel("balance", 100);
+            setBarLevel("brain", 85);
+            setBarLevel("awareness", 75);
+            setBarLevel("compassion", 80);
+            setBarLevel("alertness", 90);
+            setBarLevel("alcohol", 0);
+            setBarLevel("horny", 85);
+            setBarLevel("energy", 75);
+            setBarLevel("happiness", 45);
+            setBarLevel("stress", 25);
+            setBarLevel("confidence", 35);
+            setBarLevel("creativity", 45);
+            setBarLevel("caffeine", 15);
+            setBarLevel("gaming", 50);
+            setBarLevel("dancing", 10);
+            setBarLevel("luck", -25);
+            setBarLevel("jokes", 95);
+            setBarLevel("submissiveness", 80);
+        }
+    </script>
+</head>
+<body>
+    <h1>Vital Signs Report</h1>
+    <div class="status">Vision: <div class="bar-container"><div class="bar vision"></div></div></div>
+    <div class="status">Balance: <div class="bar-container"><div class="bar balance"></div></div></div>
+    <div class="status">Brain Functionality: <div class="bar-container"><div class="bar brain"></div></div></div>
+    <div class="status">Awareness: <div class="bar-container"><div class="bar awareness"></div></div></div>
+    <div class="status">Compassion: <div class="bar-container"><div class="bar compassion"></div></div></div>
+    <div class="status">Alertness: <div class="bar-container"><div class="bar alertness"></div></div></div>
+    <div class="status">Alcohol Level: <div class="bar-container"><div class="bar alcohol"></div></div></div>
+    <div class="status">Horny Mood: <div class="bar-container"><div class="bar horny"></div></div></div>
+    <div class="status">Energy: <div class="bar-container"><div class="bar energy"></div></div></div>
+    <div class="status">Happiness: <div class="bar-container"><div class="bar happiness"></div></div></div>
+    <div class="status">Stress: <div class="bar-container"><div class="bar stress"></div></div></div>
+    <div class="status">Confidence: <div class="bar-container"><div class="bar confidence"></div></div></div>
+    <div class="status">Creativity: <div class="bar-container"><div class="bar creativity"></div></div></div>
+    <div class="status">Caffeine Level: <div class="bar-container"><div class="bar caffeine"></div></div></div>
+    <div class="status">Gaming Skill: <div class="bar-container"><div class="bar gaming"></div></div></div>
+    <div class="status">Dancing Ability: <div class="bar-container"><div class="bar dancing"></div></div></div>
+    <div class="status">Luck Level: <div class="bar-container"><div class="bar luck"></div></div></div>
+    <div class="status">Joke Quality: <div class="bar-container"><div class="bar jokes"></div></div></div>
+    <div class="status">Submissiveness: <div class="bar-container"><div class="bar submissiveness"></div></div></div>
+    <h2>--- REPORT ENDED ---</h2>
+    <p>This report will be updated when I feel like it's necessary or when I have time. It will not be updated every second!</p>
+</body>
+</html>
